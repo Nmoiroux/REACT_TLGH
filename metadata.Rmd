@@ -1,0 +1,338 @@
+---
+title: "metadata"
+output: html_document
+date: "2025-05-28"
+---
+
+## Overview of Datasets
+
+| Dataset Name     | Analysis                                                                      | Data Type / Source                               | .RData File         |
+|------------------|-------------------------------------------------------------------------------|--------------------------------------------------|---------------------|
+| `pas_ana_rate_subgroup` | Incidence rate analysis.                                               | Clinical – Passive Surveillance                  | data.RData          |
+| `df_case`        | Case prevalence.                                                              | Clinical – Cross-Sectional Survey                | data.RData          |
+| `df_GE_BF`       | Infection prevalence in Burkina Faso.                                         | Infection – Cross-Sectional Survey               | data.RData          |
+| `df_GE_CI`       | Infection prevalence in Côte d'Ivoire.                                        | Infection – Cross-Sectional Survey               | data.RData          |
+| `df_dp_BF`       | Parasite density in Burkina Faso.                                             | Infection – Cross-Sectional Survey               | data.RData          |
+| `df_dp_CI`       | Parasite density in Côte d'Ivoire.                                            | Infection – Cross-Sectional Survey               | data.RData          |
+| `df_use`         | Long-Lasting Insecticidal Net (LLIN) usage.                                   | Behaviour – Cross-Sectional Survey               | data2.RData         |
+| `data_meta_IRS`  | Meta-analysis of Non-Pyrethroid Indoor Residual Spraying (IRS) studies.       | Intervention – IRS Meta-Analysis                 | data_meta_IRS.RData |
+| `hbr`            | Human Biting Rate (HBR) by *Anopheles* mosquitoes.                            | Entomology – Entomological Survey                | entomo.RData        |
+| `nuis`           | Nuisance mosquito HBR (all genera, not just *Anopheles*).                     | Entomology – Entomological Survey                | entomo.RData        |
+| `SR_BF`          | Sporozoite infection rate in *Anopheles* in Burkina Faso.                     | Entomology – Entomological Survey                | entomo.RData        |
+| `SR_CI`          | Sporozoite infection rate in *Anopheles* in Côte d'Ivoire.                    | Entomology – Entomological Survey                | entomo.RData        |
+| `eir_BF`         | Entomological Inoculation Rate in Burkina Faso.                               | Entomology – Entomological Survey                | entomo.RData        |
+| `eir_CI`         | Entomological Inoculation Rate in Côte d'Ivoire.                              | Entomology – Entomological Survey                | entomo.RData        |
+| `PR_BF`          | Parity rate of *Anopheles* in Burkina Faso.                                   | Entomology – Entomological Survey                | entomo.RData        |
+| `PR_CI`          | Parity rate of *Anopheles* in Côte d'Ivoire.                                  | Entomology – Entomological Survey                | entomo.RData        |
+| `KDRW_BF`        | Frequency of *kdr-w* resistance allele in *Anopheles* from Burkina Faso.      | Genetics – Insecticide Resistance (BF)           | entomo.RData        |
+| `KDRW_CI`        | Frequency of *kdr-w* resistance allele in *Anopheles* from Côte d'Ivoire.     | Genetics – Insecticide Resistance (CI)           | entomo.RData        |
+| `KDRE_BF`        | Frequency of *kdr-e* resistance allele in *Anopheles* from Burkina Faso.      | Genetics – Insecticide Resistance (BF)           | entomo.RData        |
+| `ACE1_BF`        | Frequency of *ace-1* resistance allele in *Anopheles* from Burkina Faso.      | Genetics – Insecticide Resistance (BF)           | entomo.RData        |
+| `ACE1_CI`        | Frequency of *ace-1* resistance allele in *Anopheles* from Côte d'Ivoire.     | Genetics – Insecticide Resistance (CI)           | entomo.RData        |
+| `ER`             | Exophagy rate (outdoor vs indoor biting behavior) of *Anopheles* mosquitoes.  | Entomology – Entomological Survey                | entomo.RData        |
+| `Hour_BF`        | Hour of collection of *Anopheles* mosquitoes in Burkina Faso.                 | Entomology – Entomological Survey                | entomo.RData        |
+| `Hour_CI`        | Hour of collection of *Anopheles* mosquitoes in Côte d'Ivoire.                | Entomology – Entomological Survey                | entomo.RData        |
+
+
+## Metadata for `pas_ana_rate_subgroup` dataset (incidence rate analysis - Passive Case Detection)
+
+| Variable Name  | Type      | Description                                                                 |
+|----------------|-----------|-----------------------------------------------------------------------------|
+| `date`         | Date      | Date of malaria case reporting (format: YYYY-MM-DD).                        |
+| `country`      | Factor    | Country code; e.g., `"BF"` for Burkina Faso.                                |
+| `codevillage`  | Factor    | Code identifying the village where the individual resides.                  |
+| `prepost`      | Numeric   | Indicates period relative to the intervention: `0` = Before, `1` = After.   |
+| `age_c`        | Factor    | Age category of cases: e.g., `"0-5"`, `">18"`, etc.                         |
+| `codepays`     | Factor    | Country code (duplicated from `country`), e.g., `"BF"`.                     |
+| `csps_csu`     | Factor    | Name of the health center (CSPS or CSU) where data was collected.           |
+| `sum`          | Integer   | Total population of the village.                                            |
+| `pop_age`      | Integer   | Sub-population in the given age group.                                      |
+| `n`            | Numeric   | Number of confirmed malaria cases in that stratum (village × age group).    |
+| `logpop`       | Numeric   | Natural logarithm of the population (`log(pop_age)`).                       |
+| `week_n`       | Numeric   | Epidemiological week number of the report.                                  |
+| `Interv`       | Factor    | Intervention group label. `Ctrle` = Control , `IEC` = BCC , `IRS`           |
+| `week_f`       | Factor    | Week number (formatted or NumFactor).                                       |
+
+
+## Metadata for dataframe `df_case` dataset (case prevalence analysis - Cross-Sectional Surveys)
+
+| Variable Name  | Type      | Description                                                                 |
+|----------------|-----------|-----------------------------------------------------------------------------|
+| `datenquete`   | Date      | Date of the survey (format: YYYY-MM-DD).                                    |
+| `csps`         | Character | Name of the primary health center (Centre de Santé et de Promotion Sociale).|
+| `codevillage`  | Character | Code identifying the village where the individual resides.                  |
+| `codeindividu` | Character | Unique identifier for the individual.                                       |
+| `sexe`         | Character | Sex of the individual: `"M"` = Male, `"F"` = Female.                        |
+| `age`          | Numeric   | Age of the individual in completed years.                                   |
+| `codepays`     | Character | Country code; e.g., `"CI"` for Côte d'Ivoire.                               |
+| `prepost`      | Numeric   | Indicates period relative to the intervention: `0` = Before, `1` = After.   |
+| `case`         | Numeric   | Malaria case status: `0` = Negative , `1` = Positive (malaria case).        |
+| `enq_loc`      | Character | Survey identifier (concatenate country ID and survey No. Example: `"CI1"`.  |
+| `age_c`        | Factor    | Age category: `"0-5"`, `"5-18"`                        						         |
+| `Interv`       | Character | Intervention group label. `Ctrle` = Control , `IEC` = BCC , `IRS`           |
+| `time_f`       | Numeric   | Survey round number (e.g., `1` for first round). 							             |
+
+
+## Metadata for `df_GE_BF` (Burkina Faso) & `df_GE_CI` (Côte d'Ivoire) datasets (Prevalence of infection analysis - Cross-Sectional Surveys)
+
+| Variable Name  | Type      | Description                                                                 |
+|----------------|-----------|-----------------------------------------------------------------------------|
+| `codeindividu` | Factor    | Unique identifier for each individual sampled.                              |
+| `codevillage`  | Factor    | Code identifying the village of residence.                                  |
+| `prev`         | Integer   | Result of blood smear: `1` = Positive, `0` = Negative, `NA` = Missing       |
+| `prepost`      | Numeric   | Period relative to the intervention: `0` = Before, `1` = After.             |
+| `enq_loc`      | Factor    | Survey identifier (concatenate country ID and survey No. Example: `"CI1"`.  |
+| `age`          | Numeric   | Age of the individual (can include decimal values for finer resolution).    |
+| `sexe`         | Numeric   | Sex of the individual: `0` = Female, `1` = Male.                            |
+| `Interv`       | Factor    | Intervention group label. `Ctrle` = Control , `IEC` = BCC , `IRS`           |
+| `age_c`        | Factor    | Age category: `"0-5"`, `"5-18"`                        						         |
+
+
+## Metadata for `df_dp_BF` (Burkina Faso) & `df_dp_CI` (Côte d'Ivoire) datasets (parasite density analysis - Cross-Sectional Surveys)
+
+| Variable Name  | Type      | Description                                                                 |
+|----------------|-----------|-----------------------------------------------------------------------------|
+| `datenquete`   | Character | Date of the survey (format: "YYYY-MM-DD").                                  |
+| `csps`         | Character | Name of the health center (CSPS or CSU) where the individual was surveyed.  |
+| `codevillage`  | Character | Code identifying the village of residence.                                  |
+| `codeindividu` | Character | Unique identifier for the individual.                                       |
+| `sexe`         | Character | Sex of the individual: `"M"` = Male, `"F"` = Female.                        |
+| `age`          | Numeric   | Age of the individual in years.                                             |
+| `codepays`     | Character | Country code; e.g., `"BF"` for Burkina Faso.                                |
+| `prepost`      | Numeric   | Period relative to the intervention: `0` = Before, `1` = After.             |
+| `enq_loc`      | Character | Survey identifier (concatenate country ID and survey No. Example: `"CI1"`.  |
+| `age_c`        | Factor    | Age category of the individual (e.g., `"0-5"`, `"5-18"`).                   |
+| `Interv`       | Character | Intervention group label. `Ctrle` = Control , `IEC` = BCC , `IRS`           |
+| `dp_pf`        | Numeric   | Parasite density for *Plasmodium falciparum* (number of parasites/µL).      |
+
+
+## Metadata for `df_use` dataset (LLIN Use - Cross-Sectional Surveys)
+
+| Variable Name  | Type      | Description                                                                 |
+|----------------|-----------|-----------------------------------------------------------------------------|
+| `datenquete`   | Character | Date of the survey (format: "YYYY-MM-DD").                                  |
+| `csps`         | Character | Name of the health center (CSPS or CSU) where the individual was surveyed.  |
+| `codevillage`  | Character | Code identifying the village of residence.                                  |
+| `codeindividu` | Character | Unique identifier for the individual.                                       |
+| `sexe`         | Character | Sex of the individual: `"M"` = Male, `"F"` = Female.                        |
+| `age`          | Numeric   | Age of the individual in years.                                             |
+| `codepays`     | Character | Country code (e.g., `"CI"` for Côte d’Ivoire, `"BF"` for Burkina Faso).     |
+| `prepost`      | Numeric   | Period relative to the intervention: `0` = Before, `1` = After.             |
+| `age_c`        | Factor    | Age category of the individual (e.g., `"0-5"`, `"5-18"`).                   |
+| `Interv`       | Character | Intervention group label. `Ctrle` = Control , `IEC` = BCC , `IRS`           |
+| `use`          | Numeric   | Use of LLIN the previous night: `1` = Yes, `0` = No.                        |
+| `cov`          | Numeric   | Household-level LLIN coverage: `1` = Covered, `0` = Not covered.            |
+| `enq_loq`      | Factor    | Survey identifier (concatenate country ID and survey No. Example: `"CI1"`.  |
+| `tmin`         | Numeric   | Minimum temperature recorded (°C) at the time of the survey.                |
+
+
+## Metadata for `data_meta_IRS` dataset (Meta-Analysis of Non-Pyrethroid IRS)
+
+| Variable Name | Type      | Description                                                                 |
+|---------------|-----------|-----------------------------------------------------------------------------|
+| `Study`       | Character | Name of the first author or identifier of the study.                        |
+| `year`        | Numeric   | Year of publication of the study.                                           |
+| `estimate`    | Numeric   | Log risk ratio (log-RR) estimate for the effect of non-PYR IRS.             |
+| `se`          | Numeric   | Standard error associated with the log-RR estimate.                         |
+| `RR`          | Numeric   | Rate Ratio (RR)                                                             |
+| `lowCI`       | Numeric   | Lower bound of the 95% Confidence Interval for the RR.                      |
+| `highCI`      | Numeric   | Upper bound of the 95% Confidence Interval for the RR.                      |
+
+
+## Metadata for `hbr` dataset (Anopheles Human Biting Rate (HBR))
+
+| Variable Name       | Type      | Description                                                                 |
+|---------------------|-----------|-----------------------------------------------------------------------------|
+| `idpostedecapture`  | Character | Unique identifier of the mosquito capture point (post and night).          |
+| `hbr`               | Integer   | Human biting rate, i.e., number of Anopheles bites per person per night.   |
+| `codevillage`       | Character | Code identifying the village where capture occurred.                       |
+| `intervention`      | Character | Type of vector control intervention in place (Ctrle, IEC = BCC, IRS).      |
+| `miss_area`         | Character | Survey identifier (concatenate country ID and survey No. Example: `"CI_1"`.|
+| `nummission`        | Integer   | survey No.                                                                 |
+| `point`             | Character | Code for the capture site (location).                                      |
+| `poste`             | Character | Code for the specific capture post (with suffix i = indoor, e = outdoor).  |
+| `prepost`           | Numeric   | Indicator for pre- (0) or post- (1) intervention capture.                  |
+| `codepays`          | Character | Country code (e.g., BF = Burkina Faso).                                    |
+
+
+## Metadata for `nuis` dataset (Mosquito HBR (Nuisance))
+
+| Variable Name       | Type      | Description                                                                 |
+|---------------------|-----------|-----------------------------------------------------------------------------|
+| `idpostedecapture`   | Character | Identifier of the capture post (unique location code, e.g., 1BOH1e).        |
+| `nuis`               | Integer   | Human biting rate, i.e., number of mosquito bites per person per night.     |
+| `codevillage`        | Character | Code of the village where the mosquito collection occurred.                 |
+| `intervention`       | Character | Type of vector control intervention in place (Ctrle, IEC = BCC, IRS).       |
+| `miss_area`          | Character | Survey identifier (concatenate country ID and survey No. Example: `"CI_1"`. |
+| `nummission`         | Integer   | Survey No.                                                                  |
+| `point`              | Character | Point of collection within village (e.g., BOH1, KPA2).                      |
+| `poste`              | Character | Specific collection post (e.g., BOH1e = exterior, BOH1i = interior).        |
+| `prepost`            | Numeric   | Indicator for period: 0 = pre-intervention, 1 = post-intervention.         |
+| `codepays`           | Character | Country code (e.g., BF = Burkina Faso).                                     |
+
+
+## Metadata for `SR_BF` (Burkina Faso) & `SR_CI` (Côte d'Ivoire) datasets (Anopheles Sporozoite Infection)
+
+| Variable Name       | Type      | Description                                                                 |
+|---------------------|-----------|-----------------------------------------------------------------------------|
+| `idmoustique`       | Factor    | Unique identifier of the mosquito individual.                              |
+| `nummission`        | Numeric   | survey No.                                                                 |
+| `codevillage`       | Character | Code of the village where the mosquito was captured.                       |
+| `codepays`          | Factor    | Country code (e.g., BF = Burkina Faso).                                    |
+| `idpostedecapture`  | Factor    | Identifier of the specific mosquito capture post.                          |
+| `especeanoph`       | Factor    | Morphologically identified Anopheles species.                              |
+| `pcr_espece`        | Factor    | Species identified by PCR (if available).                                  |
+| `pcr_pf`            | Numeric   | Sporozoite infection status with *Plasmodium falciparum* (0 = negative, 1 = positive). |
+| `prepost`           | Numeric   | Indicates if capture occurred before (0) or after (1) the intervention.    |
+| `point`             | Character | Code for the capture site (location).                                      |
+| `poste`             | Character | Code for the specific capture post (with suffix i = indoor, e = outdoor).  |
+| `intervention`      | Character | Type of vector control intervention in place (Ctrle, IEC = BCC, IRS).      |
+
+
+## Metadata for `eir_BF` (Burkina Faso) dataset (Entomological Inoculation Rate (EIR))
+
+| Variable Name       | Type      | Description                                                                 |
+|---------------------|-----------|-----------------------------------------------------------------------------|
+| `idpostedecapture`  | Character | Unique identifier of the mosquito capture post.                            |
+| `eir`               | Numeric   | EIR, i.e., number of infective bites per unit time.                        |
+| `codevillage`       | Character | Code of the village where capture occurred.                                |
+| `intervention`      | Character | Type of vector control intervention in place (Ctrle, IEC = BCC, IRS).      |
+| `nummission`        | Integer   | survey No.                                                                 |
+| `point`             | Character | Code for the capture point (e.g., BOH1, GBI1).                             |
+| `poste`             | Character | Specific capture post (e.g., BOH1e = exterior, BOH1i = interior).          |
+| `prepost`           | Numeric   | Indicates whether the data was collected before (0) or after (1) the intervention. |
+
+
+## Metadata for `eir_CI` (Côte d'Ivoire) dataset (Entomological Inoculation Rate (EIR))
+
+| Variable Name       | Type      | Description                                                                 |
+|---------------------|-----------|-----------------------------------------------------------------------------|
+| `idpostedecapture`  | Character | Unique identifier of the mosquito capture post.                            |
+| `n_inf`             | Numeric   | Number of *Plasmodium falciparum*-infected mosquitoes at the capture post. |
+| `n_pcr_pf`          | Integer   | Number of mosquitoes tested by PCR for *P. falciparum*.                    |
+| `N`                 | Integer   | Total number of mosquitoes captured.                                       |
+| `eir`               | Numeric   | EIR = `n_inf`/`n_pcr_pf`*`N`                                               |
+| `codevillage`       | Character | Code of the village where capture occurred.                                |
+| `intervention`      | Character | Type of vector control intervention in place (Ctrle, IEC = BCC, IRS).      |
+| `nummission`        | Integer   | survey No.                                                                 |
+| `point`             | Character | Code for the capture point (e.g., BAP1, BLA1).                             |
+| `poste`             | Character | Specific capture post (e.g., BAP1e = exterior, BAP1i = interior).          |
+| `r_eir`             | Numeric   | Rounded EIR (for analysis with count model.                                |
+
+
+## Metadata for `PR_BF` (Burkina Faso) & `PR_CI` (Côte d'Ivoire) datasets (Parity Rate) 
+
+| Variable Name       | Type      | Description                                                                 |
+|---------------------|-----------|-----------------------------------------------------------------------------|
+| `idmoustique`        | Factor    | Unique identifier for each dissected mosquito.                              |
+| `nummission`         | Numeric   | Mission round number.                                                       |
+| `codevillage`        | Character | Code of the village where the mosquito was captured.                        |
+| `codepays`           | Factor    | Country code (e.g., BF = Burkina Faso).                                     |
+| `idpostedecapture`   | Factor    | Identifier for the capture post.                                            |
+| `especeanoph`        | Factor    | Morphological species identification of the mosquito (e.g., An.funestus).   |
+| `pcr_espece`         | Factor    | Molecular species identification (e.g., An.coluzzii, An.funestus_ss).       |
+| `prepost`            | Numeric   | Indicator for pre- (0) or post- (1) intervention period.                    |
+| `point`              | Character | Code for the capture point (e.g., BOH1, GBI2).                              |
+| `poste`              | Character | Specific capture post (e.g., BOH1e = exterior, BOH1i = interior).           |
+| `intervention`       | Character | Type of vector control intervention in place (Ctrle, IEC = BCC, IRS).       |
+| `pr`                 | Numeric   | Parity rate: 1 = parous, 0 = nulliparous                                    |
+
+
+## Metadata for `KDRW_BF` (Burkina Faso) & `KDRW_CI` (Côte d'Ivoire) datasets (Kdr-w Allele)
+
+| Variable Name       | Type      | Description                                                                 |
+|---------------------|-----------|-----------------------------------------------------------------------------|
+| `idmoustique`        | Factor    | Unique identifier for each mosquito genotyped.                              |
+| `nummission`         | Numeric   | Mission round number.                                                       |
+| `codevillage`        | Character | Code of the village where the mosquito was captured.                        |
+| `codepays`           | Factor    | Country code (e.g., BF = Burkina Faso).                                     |
+| `idpostedecapture`   | Factor    | Identifier for the capture post.                                            |
+| `especeanoph`        | Factor    | Morphological identification of the *Anopheles* species.                    |
+| `pcr_espece`         | Factor    | Molecular species identification (e.g., *An. coluzzii*, *An. gambiae_ss*). |
+| `kdrw`               | Factor    | Genotype at the kdr-w (L1014F) locus: SS (homozygous susceptible), RS (heterozygous), RR (homozygous resistant). |
+| `prepost`            | Numeric   | Indicator for pre- (0) or post- (1) intervention period.                     |
+| `point`              | Character | Code for the capture point (e.g., BOH1, NAV2).                              |
+| `poste`              | Character | Specific capture post (e.g., BOH1e = exterior, BOH1i = interior).           |
+| `intervention`       | Character | Type of vector control intervention in place (Ctrle, IEC = BCC, IRS).       |
+| `allele`             | Character | Allele designation: A1 or A2.                                               |
+| `mutation`           | Character | Mutation carried by the allele: R (resistant) or S (susceptible).           |
+| `fa`                 | Numeric   | Allele frequency (0 or 1) for this allele within the individual mosquito.   |
+
+
+## Metadata for `KDRE_BF` (Burkina Faso) datasets (Kdr-e Allele)
+
+| Variable Name       | Type      | Description                                                                 |
+|---------------------|-----------|-----------------------------------------------------------------------------|
+| `idmoustique`        | Factor    | Unique identifier for each mosquito genotyped.                              |
+| `nummission`         | Numeric   | Mission round number.                                                       |
+| `codevillage`        | Character | Code of the village where the mosquito was captured.                        |
+| `codepays`           | Factor    | Country code (e.g., BF = Burkina Faso).                                     |
+| `idpostedecapture`   | Factor    | Identifier for the capture post.                                            |
+| `especeanoph`        | Factor    | Morphological identification of the *Anopheles* species.                    |
+| `pcr_espece`         | Factor    | Molecular species identification (e.g., *An. coluzzii*, *An. gambiae_ss*). |
+| `kdre`               | Factor    | Genotype at the kdr-e (L1014S) locus: SS (homozygous susceptible), RS (heterozygous), RR (homozygous resistant). |
+| `prepost`            | Numeric   | Indicator for pre- (0) or post- (1) intervention period.                     |
+| `point`              | Character | Code for the capture point (e.g., BOH1, NAV2).                              |
+| `poste`              | Character | Specific capture post (e.g., BOH1e = exterior, BOH1i = interior).           |
+| `intervention`       | Character | Type of vector control intervention in place (Ctrle, IEC = BCC, IRS).       |
+| `allele`             | Character | Allele designation: A1 or A2.                                               |
+| `mutation`           | Character | Mutation carried by the allele: R (resistant) or S (susceptible).           |
+| `fa`                 | Numeric   | Allele frequency (0 or 1) for this allele within the individual mosquito.   |
+
+
+## Metadata for `ACE1_BF` (Burkina Faso) & `ACE1_CI` (Côte d'Ivoire) datasets (Kdr-w Allele)
+
+| Variable Name       | Type      | Description                                                                 |
+|---------------------|-----------|-----------------------------------------------------------------------------|
+| `idmoustique`        | Factor    | Unique identifier for each mosquito genotyped.                              |
+| `nummission`         | Numeric   | Mission round number.                                                       |
+| `codevillage`        | Character | Code of the village where the mosquito was captured.                        |
+| `codepays`           | Factor    | Country code (e.g., BF = Burkina Faso).                                     |
+| `idpostedecapture`   | Factor    | Identifier for the capture post.                                            |
+| `especeanoph`        | Factor    | Morphological identification of the *Anopheles* species.                    |
+| `pcr_espece`         | Factor    | Molecular species identification (e.g., *An. coluzzii*, *An. gambiae_ss*). |
+| `ace1`               | Factor    | Genotype at the Ace-1 (G119S) locus: SS (homozygous susceptible), RS (heterozygous), RR (homozygous resistant). |
+| `prepost`            | Numeric   | Indicator for pre- (0) or post- (1) intervention period.                     |
+| `point`              | Character | Code for the capture point (e.g., BOH1, NAV2).                              |
+| `poste`              | Character | Specific capture post (e.g., BOH1e = exterior, BOH1i = interior).           |
+| `intervention`       | Character | Type of vector control intervention in place (Ctrle, IEC = BCC, IRS).       |
+| `allele`             | Character | Allele designation: A1 or A2.                                               |
+| `mutation`           | Character | Mutation carried by the allele: R (resistant) or S (susceptible).           |
+| `fa`                 | Numeric   | Allele frequency (0 or 1) for this allele within the individual mosquito.   |
+
+
+## Metadata for `Hour_BF` (Burkina Faso) & `Hour_CI` (Côte d'Ivoire) of Collection Dataset 
+
+| Variable Name       | Type      | Description                                                                 |
+|---------------------|-----------|-----------------------------------------------------------------------------|
+| `idmoustique`        | Factor    | Unique identifier for each mosquito collected.                              |
+| `nummission`         | Numeric   | Mission round number.                                                       |
+| `codevillage`        | Character | Code of the village where the mosquito was captured.                        |
+| `codepays`           | Factor    | Country code (e.g., BF = Burkina Faso).                                     |
+| `idpostedecapture`   | Factor    | Identifier for the capture post.                                            |
+| `especeanoph`        | Factor    | Morphological identification of the *Anopheles* species.                    |
+| `pcr_espece`         | Factor    | Molecular species identification (e.g., *An. coluzzii*, *An. gambiae_ss*, NA). |
+| `prepost`            | Numeric   | Indicator for pre- (0) or post- (1) intervention period.                     |
+| `point`              | Character | Code for the capture point (e.g., BOH1, KPA2).                              |
+| `poste`              | Character | Specific capture post (e.g., BOH1e = exterior, BOH1i = interior).           |
+| `intervention`       | Character | Intervention type at the capture site (e.g., Ctrle, IEC, IRS).              |
+| `hour`               | Numeric   | Hour of mosquito collection (0 = 12:00, 12 = 00:00).                        |
+| `hour_sc`            | Numeric   | Scaled hour of collection (normalized from 0 to 1, with 0 = earliest hour). |
+
+
+## Metadata for `ER` dataset (Anopheles Exophagy Rate)
+
+| Variable Name       | Type      | Description                                                                 |
+|---------------------|-----------|-----------------------------------------------------------------------------|
+| `idmoustique`        | Character | Unique mosquito identifier (individual-level).                              |
+| `nummission`         | Integer   | Mission round number.                                                       |
+| `codevillage`        | Character | Village code where the mosquito was collected.                              |
+| `codepays`           | Character | Country code (e.g., BF = Burkina Faso).                                     |
+| `idpostedecapture`   | Character | Unique identifier for the capture site.                                     |
+| `especeanoph`        | Character | Morphological species identification (e.g., *An. funestus*).                |
+| `pcr_espece`         | Character | Molecular species identification (PCR results, e.g., *An. coluzzii*).       |
+| `prepost`            | Numeric   | Indicator for period: 0 = pre-intervention, 1 = post-intervention.          |
+| `point`              | Character | Site/point of mosquito collection within the village.                       |
+| `poste`              | Character | Specific collection post (e.g., BOH1e = exterior, BOH1i = interior).        |
+| `intervention`       | Character | Intervention type applied at the site (e.g., Ctrle, IEC, IRS).              |
+| `er`                 | Numeric   | Exophagy rate: 1 = mosquito caught outdoors (exophagic), 0 = indoors.       |
