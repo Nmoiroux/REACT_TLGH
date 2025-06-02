@@ -13,7 +13,7 @@ June 2025. Available at: https://github.com/Nmoiroux/REACT_TLGH
 ## Repository Structure
 ├── README.md # This file
 
-├── metadata.Rmd # Metadata and dataset descriptions
+├── metadata.Rmd # R Markdown file of metadata and dataset descriptions
 
 ├── Data/ # Folder containing all .RData databases
 
