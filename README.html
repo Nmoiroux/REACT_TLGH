@@ -374,14 +374,29 @@ cluster-randomized controlled trial. June 2025. Available at: <a href="https://g
 <div id="repository-structure" class="section level2">
 <h2>Repository Structure</h2>
 <p>├── README.md # This file</p>
-<p>├── metadata.Rmd # Metadata and dataset descriptions (see below)</p>
+<p>├── metadata.Rmd # Metadata and dataset descriptions</p>
 <p>├── Data/ # Folder containing all .RData databases</p>
 <p>├── R/ # Folder containing all R scripts used in the analyses</p>
 <hr />
 </div>
 <div id="metadata-overview" class="section level2">
 <h2>Metadata Overview</h2>
-<p>All datasets are described in <code>metadata.Rmd</code>.</p>
+<p>All datasets are described in <code>metadata.Rmd</code>. The
+<code>metadata.Rmd</code> provides a structured summary of all
+datasets.</p>
+<hr />
+</div>
+<div id="reproducibility" class="section level2">
+<h2>Reproducibility</h2>
+<ul>
+<li>All datasets are available as <code>R</code> Objects in
+<code>.RData</code> databases and stored in the <code>Data/</code>
+folder.</li>
+<li>Each R script is designed to be run independently and includes code
+to load data from the corresponding <code>.RData</code> database. We
+recommend setting the working directory to the root of this repository
+and sourcing each script from the <code>R/</code> folder.</li>
+</ul>
 <hr />
 </div>
 <div id="r-scripts-and-required-datasets" class="section level2">
@@ -494,21 +509,8 @@ cluster-randomized controlled trial. June 2025. Available at: <a href="https://g
 <div id="notes" class="section level2">
 <h2>Notes</h2>
 <ul>
-<li>All datasets are available as <code>R</code> Objects in
-<code>.RData</code> databases and stored in the <code>Data/</code>
-folder.</li>
-<li>The <code>metadata.Rmd</code> provides a dynamic and structured
-summary of all datasets.</li>
 <li>Please cite appropriately if using this data or code.</li>
 </ul>
-<hr />
-</div>
-<div id="reproducibility" class="section level2">
-<h2>Reproducibility</h2>
-<p>Each R script is designed to be run independently and includes code
-to load data from the corresponding <code>.RData</code> database. We
-recommend setting the working directory to the root of this repository
-and sourcing each script from the <code>R/</code> folder.</p>
 <hr />
 </div>
 
