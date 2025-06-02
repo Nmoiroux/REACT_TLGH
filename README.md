@@ -1,3 +1,8 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
 ##  Data and Analysis Repository
 
 This repository contains the data and analyses scripts for a Randomized Controlled Trial evaluating Indoor Residual Spraying (IRS) or Behavioral Change Communication in combination to Long-Lasting Insecticidal Nets (LLIN) in Burkina Faso (BF) and Côte d'Ivoire (CI).
@@ -11,13 +16,13 @@ June 2025. Available at: https://github.com/Nmoiroux/REACT_TLGH
 ---
 
 ## Repository Structure
-├── README.md # This file
+|- README.md # This file
 
-├── metadata.Rmd # R Markdown file of metadata and dataset descriptions
+|- metadata.Rmd # R Markdown file of metadata and dataset descriptions
 
-├── Data/ # Folder containing all .RData databases
+|- Data/ # Folder containing all .RData databases
 
-├── R/ # Folder containing all R scripts used in the analyses
+|- R/ # Folder containing all R scripts used in the analyses
 
 ---
 
