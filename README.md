@@ -1,7 +1,4 @@
----
-output:
-  html_document: default
-  pdf_document: default
+
 ---
 ##  Data and Analysis Repository
 
