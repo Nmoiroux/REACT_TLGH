@@ -63,7 +63,30 @@ All datasets are described in `metadata.Rmd`. The `metadata.Rmd` provides a stru
 
 ---
 
+## References
 
+- R Core Team (2024). _R: A Language and Environment for Statistical Computing_. R
+  Foundation for Statistical Computing, Vienna, Austria. <https://www.R-project.org/>.
+- Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund G, Hayes A,
+  Henry L, Hester J, Kuhn M, Pedersen TL, Miller E, Bache SM, Müller K, Ooms J, Robinson
+  D, Seidel DP, Spinu V, Takahashi K, Vaughan D, Wilke C, Woo K, Yutani H (2019).
+  “Welcome to the tidyverse.” _Journal of Open Source Software_, *4*(43), 1686.
+  doi:10.21105/joss.01686 <https://doi.org/10.21105/joss.01686>.
+- Viechtbauer, W. (2010). Conducting meta-analyses in R with the metafor package. Journal
+  of Statistical Software, 36(3), 1-48. https://doi.org/10.18637/jss.v036.i03
+- Mollie E. Brooks, Kasper Kristensen, Koen J. van Benthem, Arni Magnusson, Casper W.
+  Berg, Anders Nielsen, Hans J. Skaug, Martin Maechler and Benjamin M. Bolker (2017).
+  glmmTMB Balances Speed and Flexibility Among Packages for Zero-inflated Generalized
+  Linear Mixed Modeling. The R Journal, 9(2), 378-400. doi: 10.32614/RJ-2017-066.
+- Lenth R (2025). _emmeans: Estimated Marginal Means, aka Least-Squares Means_. R package
+  version 1.11.1, <https://CRAN.R-project.org/package=emmeans>.
+- Angelo Canty and Brian Ripley (2024). boot: Bootstrap R (S-Plus) Functions. R package
+  version 1.3-31.
+- Kassambara A (2023). _rstatix: Pipe-Friendly Framework for Basic Statistical Tests_. R
+  package version 0.7.2, <https://CRAN.R-project.org/package=rstatix>.
+  
+  
+  
 
 
 
