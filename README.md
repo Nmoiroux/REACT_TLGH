@@ -15,9 +15,9 @@ June 2025. Available at: https://github.com/Nmoiroux/REACT_TLGH
 
 ├── metadata.Rmd # Metadata and dataset descriptions
 
-├── Data.zip # Archive containing all .RData databases
+├── Data/ # Folder containing all .RData databases
 
-├── R.zip # Archive containing all R scripts used in the analyses
+├── R/ # Folder containing all R scripts used in the analyses
 
 ---
 
@@ -29,9 +29,8 @@ All datasets are described in `metadata.Rmd`. The `metadata.Rmd` provides a stru
 
 ## Reproducibility
 
-- The archives `Data.zip` and `R.zip` need to be unzipped (resulting in folders `Data/` and `R/` respectively) before using the R script.
-- All datasets are available as `R` Objects in `.RData` databases and stored in the `Data/` folder (unzipped `Data.zip`).
-- Each R script is designed to be run independently and includes code to load data from the corresponding `.RData` database. We recommend setting the working directory to the root of this repository and sourcing each script from the `R/` folder (unzipped `R.zip`).
+- All datasets are available as `R` Objects in `.RData` databases and stored in the `Data/` folder.
+- Each R script is designed to be run independently and includes code to load data from the corresponding `.RData` database. We recommend setting the working directory to the root of this repository and sourcing each script from the `R/` folder.
 
 ---
 
