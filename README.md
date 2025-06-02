@@ -7,7 +7,8 @@ This repository contains the data and analyses scripts for a Randomized Controll
 Results of this RCT have been published in: Moiroux et al. Non-pyrethroid indoor residual spraying or intensive behavior change communication in combination with long-lasting insecticidal nets against malaria disease in West Africa: a pragmatic transnational cluster-randomized controlled trial.
 2025, The Lancet Global Health.
 
-Suggested citation: Moiroux, Nicolas; Taconet, Paul; Soma, Diloma Dieudonné; Zogo, Barnabas, 2025, "Replication Data and Codes for: Non-pyrethroid indoor residual spraying or intensive behavior change communication in combination with long-lasting insecticidal nets against malaria disease in West Africa: a pragmatic transnational cluster-randomized controlled trial.", https://doi.org/10.23708/MZ7KZZ, DataSuds, V1, UNF:6:FQq6r4pEK3i3eu1HnLHjXw== [fileUNF] 
+Suggested citation: 
+- Moiroux, Nicolas; Taconet, Paul; Soma, Diloma Dieudonné; Zogo, Barnabas, 2025, "Replication Data and Codes for: Non-pyrethroid indoor residual spraying or intensive behavior change communication in combination with long-lasting insecticidal nets against malaria disease in West Africa: a pragmatic transnational cluster-randomized controlled trial.", https://doi.org/10.23708/MZ7KZZ, DataSuds, V1, UNF:6:FQq6r4pEK3i3eu1HnLHjXw== [fileUNF] 
 
 ---
 
@@ -32,7 +33,7 @@ All datasets are described in `metadata.Rmd`. The `metadata.Rmd` provides a stru
 
 - All datasets are available as `R` Objects in `.RData` databases and stored in the `Data/` folder.
 - Each R script is designed to be run independently and includes code to load data from the corresponding `.RData` database. We recommend setting the working directory to the root of this repository and sourcing each script from the `R/` folder.
-- These scripts have been tested using `R` version 4.4.2 and required additional packages `tidyverse` 2.0.0, `metafor` 4.8-0, `glmmTMB` 1.1.11, `emmeans` 1.11.1, `boot` 1.3-31 and `rstatix` 0.7.2
+- These scripts have been tested using `R` version 4.4.2 and required additional packages `tidyverse` 2.0.0, `metafor` 4.8-0, `glmmTMB` 1.1.11, `emmeans` 1.11.1, `boot` 1.3-31 and `rstatix` 0.7.2 (References below).
 
 ---
 
