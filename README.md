@@ -32,7 +32,7 @@ All datasets are described in `metadata.Rmd`. The `metadata.Rmd` provides a stru
 
 - All datasets are available as `R` Objects in `.RData` databases and stored in the `Data/` folder.
 - Each R script is designed to be run independently and includes code to load data from the corresponding `.RData` database. We recommend setting the working directory to the root of this repository and sourcing each script from the `R/` folder.
-- Later tests of this scripts have been made using `R` version 4.4.2 and required additional packages `tidyverse` 2.0.0, `metafor` 4.8-0, `glmmTMB` 1.1.11, `emmeans` 1.11.1, `boot` 1.3-31 and `rstatix` 0.7.2
+- These scripts have been tested using `R` version 4.4.2 and required additional packages `tidyverse` 2.0.0, `metafor` 4.8-0, `glmmTMB` 1.1.11, `emmeans` 1.11.1, `boot` 1.3-31 and `rstatix` 0.7.2
 
 ---
 
