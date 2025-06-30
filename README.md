@@ -2,7 +2,7 @@
 ---
 ##  Data and Analysis Repository
 
-This repository contains the data and analyses scripts for a Randomized Controlled Trial evaluating Indoor Residual Spraying (IRS) or Behavioral Change Communication in combination to Long-Lasting Insecticidal Nets (LLIN) in Burkina Faso (BF) and Côte d'Ivoire (CI).
+This repository contains the protocol, the data and analyses scripts for a Randomized Controlled Trial evaluating Indoor Residual Spraying (IRS) or Behavioral Change Communication in combination to Long-Lasting Insecticidal Nets (LLIN) in Burkina Faso (BF) and Côte d'Ivoire (CI).
 
 Results of this RCT have been published in: Moiroux et al. Non-pyrethroid indoor residual spraying or intensive behavior change communication in combination with long-lasting insecticidal nets against malaria disease in West Africa: a pragmatic transnational cluster-randomized controlled trial.
 2025, The Lancet Global Health.
@@ -13,6 +13,8 @@ Suggested citation: Moiroux, Nicolas; Taconet, Paul; Soma, Diloma Dieudonné; Zo
 
 ## Repository Structure
 |- README.md # This file
+
+|- REACT_protocol.docx # The protocol of the REACT trial
 
 |- metadata.Rmd # R Markdown file of metadata and dataset descriptions
 
