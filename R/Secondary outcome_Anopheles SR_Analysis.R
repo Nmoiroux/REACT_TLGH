@@ -24,6 +24,7 @@ load("Data/entomo.RData")
 ### Analaysis (BF area)
 #### count data
 count_SR_BF <- SR_BF %>%
+	filter(!is.na(pcr_pf)) %>%
 	group_by(intervention, prepost) %>%
 	summarise(n= sum(pcr_pf, na.rm=TRUE),N=n(), m = mean(pcr_pf,na.rm=TRUE), ci_low = ci(pcr_pf)[4], ci_hig = ci(pcr_pf)[5]) %>%
 	mutate(mean = paste0(round(m,4)*100,"% [",round(ci_low,4)*100,";",round(ci_hig,4)*100, "] (",n,"/",N,")")) %>%
@@ -51,6 +52,7 @@ res_SR_BF <- bind_cols(count_SR_BF, OR_SR_BF)
 
 #### count summary
 count_SR_CI <- SR_CI %>%
+	filter(!is.na(pcr_pf)) %>%
 	group_by(intervention) %>%
 	summarise(n= sum(pcr_pf, na.rm=TRUE),N=n(), m = mean(pcr_pf,na.rm=TRUE), ci_low = ci(pcr_pf)[4], ci_hig = ci(pcr_pf)[5]) %>%
 	mutate(mean = paste0(round(m,4)*100,"% [",round(ci_low,4)*100,";",round(ci_hig,4)*100, "] (",n,"/",N,")")) %>%

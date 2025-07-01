@@ -64,6 +64,7 @@ RR_eir_CI <- emmeans(glmm_eir_CI , ~intervention, type="response") %>%
 
 #### count data 
 count_eir_CI <- eir_CI %>%
+	filter(!is.na(r_eir)) %>%
 	group_by(intervention) %>%
 	summarise(n=sum(r_eir, na.rm = T), d= n(), m = mean(r_eir, na.rm = T), ci_low = ci(r_eir)[4], ci_hig = ci(eir)[5]) %>%
 	mutate(mean = paste0(round(m,2),"[",round(ci_low,2),";",round(ci_hig,2), "] (",n,"/",d,")")) %>%
