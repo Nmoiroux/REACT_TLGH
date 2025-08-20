@@ -4,8 +4,7 @@
 
 This repository contains the protocol, the data and analyses scripts for a Randomized Controlled Trial evaluating Indoor Residual Spraying (IRS) or Behavioral Change Communication in combination to Long-Lasting Insecticidal Nets (LLIN) in Burkina Faso (BF) and Côte d'Ivoire (CI).
 
-Results of this RCT have been published in: Moiroux et al. Non-pyrethroid indoor residual spraying or intensive behavior change communication in combination with long-lasting insecticidal nets against malaria disease in West Africa: a pragmatic transnational cluster-randomized controlled trial.
-2025, The Lancet Global Health.
+Results of this RCT have been published in: Moiroux N, Zongo I, Assi S-B, et al. Efficacy of non-pyrethroid indoor residual spraying or intensive behaviour change communication in combination with long-lasting insecticidal nets for malaria control in west Africa: a pragmatic, cluster-randomised, controlled trial. The Lancet Global Health 2025; 13: e1605–16. https://doi.org/10.1016/S2214-109X(25)00216-5
 
 Suggested citation: Moiroux, Nicolas; Taconet, Paul; Soma, Diloma Dieudonné; Zogo, Barnabas, 2025, "Replication Data and Codes for: Non-pyrethroid indoor residual spraying or intensive behavior change communication in combination with long-lasting insecticidal nets against malaria disease in West Africa: a pragmatic transnational cluster-randomized controlled trial.", https://doi.org/10.23708/MZ7KZZ, DataSuds, V1, UNF:6:FQq6r4pEK3i3eu1HnLHjXw== [fileUNF] 
 
