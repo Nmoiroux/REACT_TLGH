@@ -33,6 +33,7 @@ All datasets are described in `metadata.Rmd`. The `metadata.Rmd` provides a stru
 
 - All datasets are available as `R` Objects in `.RData` databases and stored in the `Data/` folder.
 - Each R script is designed to be run independently and includes code to load data from the corresponding `.RData` database. We recommend setting the working directory to the root of this repository and sourcing each script from the `R/` folder.
+- database `Data.RData` contains pseudonymized data and required to fill in and sign the Data Share Agreement before sharing (See `DataUseAgreement_doi_10_23708_MZ7KZZ.docx`).
 
 ---
 
