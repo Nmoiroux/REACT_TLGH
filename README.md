@@ -53,7 +53,7 @@ All datasets are described in `metadata.Rmd`. The `metadata.Rmd` provides a stru
 | `Secondary outcome_Case prevalence_Analysis.R`        | Case prevalence (Survey)             | `df_case`                                            | data.RData              |
 | `Secondary outcome_Infection Prevalence_Analysis.R`   | Infection prevalence (Survey)        | `df_GE_BF`, `df_GE_CI`                               | data.RData              |
 | `Secondary outcome_LLIN use_Analysis.R`               | LLIN use rate                        | `df_use`                                             | data2.RData             |
-| `Secondary outcome_Mosquito HBR_Analysis.R`           | Human Biting Rate (all mosquitoes)   | `nuis`                                               | data.RData              |
+| `Secondary outcome_Mosquito HBR_Analysis.R`           | Human Biting Rate (all mosquitoes)   | `nuis`                                               | entomo.RData            |
 | `Secondary outcome_Parasite density_Analysis.R`       | Parasite density (Survey)            | `df_dp_BF`, `df_dp_CI`                               | data.RData              |
 
 ---
