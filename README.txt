@@ -1,19 +1,18 @@
-
 ---
 ##  Data and Analysis Repository
 
-This repository contains the protocol, the data and analyses scripts for a Randomized Controlled Trial evaluating Indoor Residual Spraying (IRS) or Behavioral Change Communication in combination to Long-Lasting Insecticidal Nets (LLIN) in Burkina Faso (BF) and Côte d'Ivoire (CI).
+This repository contains the data and analyses scripts for a Randomized Controlled Trial evaluating Indoor Residual Spraying (IRS) or Behavioral Change Communication in combination to Long-Lasting Insecticidal Nets (LLIN) in Burkina Faso (BF) and Côte d'Ivoire (CI).
 
-Results of this RCT have been published in: Moiroux N, Zongo I, Assi S-B, et al. Efficacy of non-pyrethroid indoor residual spraying or intensive behaviour change communication in combination with long-lasting insecticidal nets for malaria control in west Africa: a pragmatic, cluster-randomised, controlled trial. The Lancet Global Health 2025; 13: e1605–16. https://doi.org/10.1016/S2214-109X(25)00216-5
+Results of this RCT have been published in: Moiroux et al. Non-pyrethroid indoor residual spraying or intensive behavior change communication in combination with long-lasting insecticidal nets against malaria disease in West Africa: a pragmatic transnational cluster-randomized controlled trial.
+2025, The Lancet Global Health.
 
-Suggested citation: Moiroux, Nicolas; Taconet, Paul; Soma, Diloma Dieudonné; Zogo, Barnabas, 2025, "Replication Data and Codes for: Non-pyrethroid indoor residual spraying or intensive behavior change communication in combination with long-lasting insecticidal nets against malaria disease in West Africa: a pragmatic transnational cluster-randomized controlled trial.", https://doi.org/10.23708/MZ7KZZ, DataSuds, V1, UNF:6:FQq6r4pEK3i3eu1HnLHjXw== [fileUNF] 
+Suggested citation: Moiroux Nicolas, Replication data and codes for: Non-pyrethroid indoor residual spraying or intensive behavior change communication in combination with long-lasting insecticidal nets against malaria disease in West Africa: a pragmatic transnational cluster-randomized controlled trial.
+June 2025. Available at: https://github.com/Nmoiroux/REACT_TLGH
 
 ---
 
 ## Repository Structure
 |- README.md # This file
-
-|- REACT_protocol.docx # The protocol of the REACT trial
 
 |- metadata.Rmd # R Markdown file of metadata and dataset descriptions
 
@@ -33,7 +32,6 @@ All datasets are described in `metadata.Rmd`. The `metadata.Rmd` provides a stru
 
 - All datasets are available as `R` Objects in `.RData` databases and stored in the `Data/` folder.
 - Each R script is designed to be run independently and includes code to load data from the corresponding `.RData` database. We recommend setting the working directory to the root of this repository and sourcing each script from the `R/` folder.
-- These scripts have been tested using `R` version 4.4.2 and required additional packages `tidyverse` 2.0.0, `metafor` 4.8-0, `glmmTMB` 1.1.11, `emmeans` 1.11.1, `boot` 1.3-31 and `rstatix` 0.7.2 (References).
 
 ---
 
@@ -64,30 +62,7 @@ All datasets are described in `metadata.Rmd`. The `metadata.Rmd` provides a stru
 
 ---
 
-## References
 
-- R Core Team (2024). _R: A Language and Environment for Statistical Computing_. R
-  Foundation for Statistical Computing, Vienna, Austria. <https://www.R-project.org/>.
-- Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund G, Hayes A,
-  Henry L, Hester J, Kuhn M, Pedersen TL, Miller E, Bache SM, Müller K, Ooms J, Robinson
-  D, Seidel DP, Spinu V, Takahashi K, Vaughan D, Wilke C, Woo K, Yutani H (2019).
-  “Welcome to the tidyverse.” _Journal of Open Source Software_, *4*(43), 1686.
-  doi:10.21105/joss.01686 <https://doi.org/10.21105/joss.01686>.
-- Viechtbauer, W. (2010). Conducting meta-analyses in R with the metafor package. Journal
-  of Statistical Software, 36(3), 1-48. https://doi.org/10.18637/jss.v036.i03
-- Mollie E. Brooks, Kasper Kristensen, Koen J. van Benthem, Arni Magnusson, Casper W.
-  Berg, Anders Nielsen, Hans J. Skaug, Martin Maechler and Benjamin M. Bolker (2017).
-  glmmTMB Balances Speed and Flexibility Among Packages for Zero-inflated Generalized
-  Linear Mixed Modeling. The R Journal, 9(2), 378-400. doi: 10.32614/RJ-2017-066.
-- Lenth R (2025). _emmeans: Estimated Marginal Means, aka Least-Squares Means_. R package
-  version 1.11.1, <https://CRAN.R-project.org/package=emmeans>.
-- Angelo Canty and Brian Ripley (2024). boot: Bootstrap R (S-Plus) Functions. R package
-  version 1.3-31.
-- Kassambara A (2023). _rstatix: Pipe-Friendly Framework for Basic Statistical Tests_. R
-  package version 0.7.2, <https://CRAN.R-project.org/package=rstatix>.
-  
-  
-  
 
 
 
