@@ -8,7 +8,7 @@ Results of this RCT have been published in: Moiroux et al. Non-pyrethroid indoor
 2025, The Lancet Global Health.
 
 Suggested citation: Moiroux Nicolas, Replication data and codes for: Non-pyrethroid indoor residual spraying or intensive behavior change communication in combination with long-lasting insecticidal nets against malaria disease in West Africa: a pragmatic transnational cluster-randomized controlled trial.
-June 2025. Available at: https://github.com/Nmoiroux/REACT_TLGH
+2025. https://doi.org/10.23708/MZ7KZZ, DataSuds, V2
 
 ---
 
